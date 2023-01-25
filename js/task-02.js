@@ -10,7 +10,7 @@ const ingredients = [
 const listRef = document.querySelector('#ingredients');
 const listRefToAdd = [];
 
-ingredients.forEach(ingredient => {
+ingredients.map(ingredient => {
   const createRef = document.createElement('li');
   createRef.classList.add('item');
   createRef.textContent = ingredient;
