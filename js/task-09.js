@@ -2,10 +2,10 @@ const textColorEl = document.querySelector('.color');
 const changeColorBtn = document.querySelector('.change-color');
 const changeBodyColor = document.querySelector('body')
 
-
 const onColorChange = function () {
-  changeBodyColor.style.backgroundColor = getRandomHexColor();
-  textColorEl.textContent = getRandomHexColor();
+  const resColor = getRandomHexColor();
+  changeBodyColor.style.backgroundColor = resColor;
+  textColorEl.textContent = resColor;
 }
 
 changeColorBtn.addEventListener('click', onColorChange);

@@ -5,7 +5,7 @@ const onInputChange = function (event) {
     if (event.currentTarget.value === "") {
         nameLabelEl.textContent = 'Anonymous'
     } else {
-         nameLabelEl.textContent = event.currentTarget.value;
+        nameLabelEl.textContent = event.currentTarget.value.trim();
     }
 }
 
