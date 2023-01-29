@@ -1,12 +1,10 @@
-const inputEl = document.querySelector('#name-input');
-const nameLabelEl = document.querySelector('#name-output');
-
-const onInputChange = function (event) {
-    if (event.currentTarget.value === "") {
-        nameLabelEl.textContent = 'Anonymous'
-    } else {
-        nameLabelEl.textContent = event.currentTarget.value.trim();
-    }
+const refs = {
+    inputRef: document.querySelector('#name-input'),
+    spanRef: document.querySelector('#name-output'),
 }
 
-inputEl.addEventListener('input', onInputChange);
+let defoltValue = "Anonymous"
+
+const addText = () => !refs.inputRef.value.trim() ? refs.spanRef.textContent = defoltValue : refs.spanRef.textContent = refs.inputRef.value;
+
+refs.inputRef.addEventListener('input', addText)
